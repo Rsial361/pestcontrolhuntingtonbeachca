@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Termites",
+    "species": "Western Drywood & Subterranean",
+    "slug": "termites",
+    "url": "/pests/termites/",
+    "serviceUrl": "/services/termite-control/",
+    "description": "Learn to distinguish between Western drywood termites living in structural rafters and subterranean termites building soil mud tubes along foundation stems.",
+    "threatLevel": "Severe Structural Damage"
+  },
+  {
+    "name": "Rodents & Roof Rats",
+    "species": "Rattus rattus & Mus musculus",
+    "slug": "rodents",
+    "url": "/pests/rodents/",
+    "serviceUrl": "/services/rodent-control/",
+    "description": "Understand the climbing biology and wire-gnawing behaviors of coastal roof rats and mice infesting Huntington Beach attics and sub-floors.",
+    "threatLevel": "Health Hazard & Fire Risk"
+  },
+  {
+    "name": "Argentine Ants",
+    "species": "Linepithema humile",
+    "slug": "ants",
+    "url": "/pests/ants/",
+    "serviceUrl": "/services/ant-control/",
+    "description": "Discover why multi-queen Argentine ant colonies establish massive underground networks across Orange County and how weather drives home invasions.",
+    "threatLevel": "Persistent Nuisance"
+  },
+  {
+    "name": "Cockroaches",
+    "species": "German, Oriental & American",
+    "slug": "cockroaches",
+    "url": "/pests/cockroaches/",
+    "serviceUrl": "/services/cockroach-control/",
+    "description": "Examine the distinct breeding habitats of German cockroaches in indoor kitchens versus moisture-seeking Oriental cockroaches around sewer ties.",
+    "threatLevel": "Contamination & Allergen Risk"
+  },
+  {
+    "name": "Bed Bugs",
+    "species": "Cimex lectularius",
+    "slug": "bed-bugs",
+    "url": "/pests/bed-bugs/",
+    "serviceUrl": "/services/bed-bug-control/",
+    "description": "Identify bed bug bites, fecal spotting, cast skins, and harborage hiding spots in coastal vacation rentals, apartments, and private homes.",
+    "threatLevel": "Severe Psychological & Bite Stress"
+  },
+  {
+    "name": "Mosquitoes",
+    "species": "Culex & Aedes Species",
+    "slug": "mosquitoes",
+    "url": "/pests/mosquitoes/",
+    "serviceUrl": "/services/mosquito-control/",
+    "description": "Explore mosquito breeding dynamics near Bolsa Chica wetlands, Huntington Harbour docks, and residential yard water catchments.",
+    "threatLevel": "Vector Disease Transmission"
+  },
+  {
+    "name": "Spiders",
+    "species": "Black Widow & Brown Widow",
+    "slug": "spiders",
+    "url": "/pests/spiders/",
+    "serviceUrl": "/services/spider-control/",
+    "description": "Recognize the spherical spiky egg sacs of brown widows and the glossy black webs of Western black widows nesting around patios and garages.",
+    "threatLevel": "Venomous Bites"
+  }
+]

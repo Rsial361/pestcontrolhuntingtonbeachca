@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>{{ seoTitle or title or site.siteTitle }}</title>
+  <meta name="description" content="{{ metaDescription or site.metaDescription }}">
+  {% if primaryKeyword %}
+  <meta name="keywords" content="{{ primaryKeyword }}">
+  {% endif %}
+  <link rel="canonical" href="{{ canonical or (site.url + page.url) }}">
+  {% if indexable == 'No' or indexable == false or noindex %}
+  <meta name="robots" content="noindex, nofollow">
+  {% else %}
+  <meta name="robots" content="index, follow">
+  {% endif %}
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ seoTitle or title or site.siteTitle }}">
+  <meta property="og:description" content="{{ metaDescription or site.metaDescription }}">
+  <meta property="og:url" content="{{ canonical or (site.url + page.url) }}">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:locale" content="en_US">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ seoTitle or title or site.siteTitle }}">
+  <meta name="twitter:description" content="{{ metaDescription or site.metaDescription }}">
+
+  <!-- Mobile Viewport and Theme Color -->
+  <meta name="theme-color" content="#0F172A">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- Preload Compiled Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+  <!-- Dynamic JSON-LD Schema Inclusion -->
+  {% include "components/schema.njk" %}
+
+  <!-- LeadsLytic Widget Script Tag -->
+  <script src="https://leadslytic.com/widget.js" data-id="ea7bd960-d33a-4dbf-b84d-bebb7867fa82" defer></script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-amber-500 selection:text-slate-950 min-h-screen flex flex-col font-sans">
+
+  <!-- Top Emergency & Dispatch Bar -->
+  <div class="bg-slate-950 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center space-y-1 sm:space-y-0">
+      <div class="flex items-center space-x-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="font-medium text-slate-300">Active Field Units Serving Huntington Beach and Coastal Orange County</span>
+      </div>
+      <div class="flex items-center space-x-4">
+        <span class="hidden md:inline text-slate-400">Mon-Sun: 7:00 AM - 8:00 PM</span>
+        <a href="tel:{{ site.phoneRaw }}" class="font-bold text-amber-400 hover:text-amber-300 transition-colors flex items-center">
+          <svg class="w-3.5 h-3.5 mr-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.13 12 19.79 19.79 0 0 1 1.06 3.39 2 2 0 0 1 3 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16l.92.92z"/></svg>
+          Direct Dispatch: {{ site.phone }}
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="bg-slate-900 text-white sticky top-0 z-40 border-b border-slate-800 shadow-lg shadow-slate-950/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo with Mobile Viewport Safety Protection -->
+        <div class="logo-container flex items-center">
+          <a href="/" class="flex items-center space-x-3 group truncate">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center text-slate-950 shadow-md shadow-amber-500/20 flex-shrink-0 group-hover:scale-105 transition-transform">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="truncate">
+              <span class="block text-base sm:text-lg font-black text-white tracking-tight leading-tight truncate group-hover:text-amber-400 transition-colors">
+                Huntington Beach Pest Control
+              </span>
+              <span class="block text-[11px] text-slate-400 font-semibold tracking-wider uppercase truncate">
+                Prompt Field Dispatch Desk
+              </span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Desktop Navigation Links with Pure CSS Dropdowns -->
+        <nav class="hidden lg:flex items-center space-x-1 xl:space-x-3 text-sm font-bold text-slate-300">
+          {% for item in navigation.main %}
+            {% if item.isDropdown %}
+              <div class="nav-dropdown py-6 px-2.5 group cursor-pointer">
+                <a href="{{ item.url }}" class="flex items-center space-x-1.5 hover:text-amber-400 transition-colors {% if item.url in page.url %}text-amber-400{% endif %}">
+                  <span>{{ item.label }}</span>
+                  <svg class="w-3.5 h-3.5 text-slate-400 group-hover:text-amber-400 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
+                </a>
+
+                <!-- Desktop Dropdown Menu Panel -->
+                <div class="nav-dropdown-menu pt-2">
+                  <div class="bg-slate-900/98 backdrop-blur-xl border border-slate-700/80 rounded-2xl shadow-2xl p-5 {% if item.label == 'Services' %}w-[680px] grid grid-cols-2 gap-3{% elif item.label == 'Pest Library' %}w-[520px] grid grid-cols-2 gap-3{% elif item.label == 'Locations' %}w-[480px] grid grid-cols-2 gap-2.5{% else %}w-[360px] flex flex-col space-y-2{% endif %}">
+                    {% for sub in item.items %}
+                      <a href="{{ sub.url }}" class="p-2.5 rounded-xl hover:bg-slate-800/90 border border-transparent hover:border-amber-500/30 transition-all flex items-start space-x-2.5 group/item">
+                        <div class="w-2 h-2 rounded-full bg-amber-500 mt-1.5 flex-shrink-0 group-hover/item:scale-125 transition-transform"></div>
+                        <div>
+                          <span class="block text-xs font-black text-white group-hover/item:text-amber-400 transition-colors">{{ sub.label }}</span>
+                          {% if sub.desc %}<span class="block text-[10px] text-slate-400 leading-snug">{{ sub.desc }}</span>{% endif %}
+                        </div>
+                      </a>
+                    {% endfor %}
+                    <div class="col-span-full pt-3 mt-1 border-t border-slate-800 text-right">
+                      <a href="{{ item.url }}" class="inline-flex items-center text-xs font-black text-amber-400 hover:text-amber-300">
+                        <span>View All {{ item.label }}</span>
+                        <svg class="w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% else %}
+              <a href="{{ item.url }}" class="hover:text-amber-400 transition-colors py-2 px-3 {% if page.url == item.url %}text-amber-400 border-b-2 border-amber-400{% endif %}">
+                {{ item.label }}
+              </a>
+            {% endif %}
+          {% endfor %}
+        </nav>
+
+        <!-- Desktop Call CTA Button -->
+        <div class="hidden lg:flex items-center">
+          <a href="tel:{{ site.phoneRaw }}" class="inline-flex items-center px-5 py-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-black text-sm shadow-md shadow-amber-500/20 transition-all transform hover:-translate-y-0.5 space-x-2">
+            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.13 12 19.79 19.79 0 0 1 1.06 3.39 2 2 0 0 1 3 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16l.92.92z"/></svg>
+            <span>Call {{ site.phone }}</span>
+          </a>
+        </div>
+
+        <!-- Pure CSS Mobile Hamburger Toggle Button -->
+        <div class="flex items-center lg:hidden">
+          <input type="checkbox" id="mobile-toggle" class="peer hidden" aria-label="Toggle Mobile Menu" />
+          <label for="mobile-toggle" class="w-11 h-11 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-200 cursor-pointer hover:text-amber-400 transition-colors select-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </label>
+
+          <!-- Pure CSS Mobile Drawer Menu -->
+          <div class="hidden peer-checked:block lg:hidden fixed inset-x-0 top-[117px] sm:top-[113px] bottom-0 bg-slate-900/98 backdrop-blur-lg border-b border-slate-800 shadow-2xl p-6 z-50 overflow-y-auto">
+            <nav class="flex flex-col space-y-3 text-base font-bold text-slate-200 mb-6">
+              {% for item in navigation.main %}
+                {% if item.isDropdown %}
+                  <details class="group border-b border-slate-800 pb-2">
+                    <summary class="flex items-center justify-between py-2 cursor-pointer text-slate-200 hover:text-amber-400 transition-colors">
+                      <span class="text-base font-black">{{ item.label }}</span>
+                      <svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="pl-3 pr-1 py-2 grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+                      {% for sub in item.items %}
+                        <a href="{{ sub.url }}" class="text-xs font-semibold text-slate-300 hover:text-amber-400 py-1.5 flex items-center">
+                          <span class="w-1.5 h-1.5 rounded-full bg-amber-500 mr-2 flex-shrink-0"></span>
+                          <span class="truncate">{{ sub.label }}</span>
+                        </a>
+                      {% endfor %}
+                      <a href="{{ item.url }}" class="text-xs font-black text-amber-400 py-1.5 block sm:col-span-2">
+                        View All {{ item.label }} →
+                      </a>
+                    </div>
+                  </details>
+                {% else %}
+                  <a href="{{ item.url }}" class="hover:text-amber-400 py-2 border-b border-slate-800 transition-colors flex items-center justify-between">
+                    <span>{{ item.label }}</span>
+                    <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
+                  </a>
+                {% endif %}
+              {% endfor %}
+            </nav>
+            <a href="tel:{{ site.phoneRaw }}" class="w-full py-4 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-black text-center text-lg shadow-lg flex items-center justify-center space-x-2">
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.13 12 19.79 19.79 0 0 1 1.06 3.39 2 2 0 0 1 3 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16l.92.92z"/></svg>
+              <span>Call Dispatch Desk: {{ site.phone }}</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="flex-grow">
+    {{ content | safe }}
+  </main>
+
+  <!-- High-Authority Semantic Footer -->
+  <footer class="bg-slate-950 text-white border-t border-slate-800 pt-16 pb-24 lg:pb-16 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+        
+        <!-- Brand & NAP Authority Column -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center space-x-3">
+            <div class="w-9 h-9 rounded-xl bg-amber-500 flex items-center justify-center text-slate-950 font-bold shadow-md">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <span class="text-lg font-black text-white tracking-tight">Huntington Beach Pest Control</span>
+          </div>
+
+          <p class="text-slate-400 text-xs leading-relaxed max-w-sm">
+            Professional local pest control and exterminator dispatch connecting Huntington Beach residential and commercial property owners with qualified, background-vetted field technicians.
+          </p>
+
+          <div class="pt-2 text-xs text-slate-300 space-y-1.5">
+            <p class="flex items-center"><span class="font-bold text-amber-400 mr-2">Address:</span> {{ site.address.street }}, {{ site.address.city }}, {{ site.address.state }} {{ site.address.zip }}</p>
+            <p class="flex items-center"><span class="font-bold text-amber-400 mr-2">Phone:</span> <a href="tel:{{ site.phoneRaw }}" class="hover:text-amber-400">{{ site.phone }}</a></p>
+            <p class="flex items-center"><span class="font-bold text-amber-400 mr-2">Hours:</span> {{ site.hours }}</p>
+            <p class="flex items-center text-slate-400 text-[11px]"><span class="font-bold text-slate-300 mr-2">Verification:</span> {{ site.license }}</p>
+          </div>
+        </div>
+
+        <!-- Commercial Services Links -->
+        <div>
+          <h4 class="text-xs font-black text-amber-400 uppercase tracking-wider mb-4">Core Services</h4>
+          <ul class="space-y-2 text-xs text-slate-400 font-medium">
+            {% for s in navigation.footerServices %}
+              {% if loop.index <= 6 %}
+                <li><a href="{{ s.url }}" class="hover:text-amber-400 transition-colors">{{ s.label }}</a></li>
+              {% endif %}
+            {% endfor %}
+            <li><a href="/services/" class="text-amber-400 font-bold hover:underline">View All 15 Services →</a></li>
+          </ul>
+        </div>
+
+        <!-- Pest Entity Knowledge Links -->
+        <div>
+          <h4 class="text-xs font-black text-amber-400 uppercase tracking-wider mb-4">Pest Library</h4>
+          <ul class="space-y-2 text-xs text-slate-400 font-medium">
+            {% for p in navigation.footerPests %}
+              <li><a href="{{ p.url }}" class="hover:text-amber-400 transition-colors">{{ p.label }}</a></li>
+            {% endfor %}
+            <li><a href="/pests/" class="text-amber-400 font-bold hover:underline">View All 7 Pests →</a></li>
+          </ul>
+        </div>
+
+        <!-- Regional Coverage & Legal Links -->
+        <div>
+          <h4 class="text-xs font-black text-amber-400 uppercase tracking-wider mb-4">Service Territory</h4>
+          <ul class="space-y-2 text-xs text-slate-400 font-medium">
+            {% for loc in navigation.footerLocations %}
+              <li><a href="{{ loc.url }}" class="hover:text-amber-400 transition-colors">{{ loc.label }}</a></li>
+            {% endfor %}
+            <li><a href="/locations/" class="text-amber-400 font-bold hover:underline">All Territories →</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Copyright & Compliance Strip -->
+      <div class="pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 space-y-4 md:space-y-0">
+        <div>
+          &copy; {{ "" | year }} Huntington Beach Pest Control. All rights reserved. Professional pest control dispatch services.
+        </div>
+        <div class="flex items-center space-x-6 text-xs">
+          <a href="/privacy-policy/" class="hover:text-slate-400 transition-colors">Privacy Policy</a>
+          <a href="/contact/" class="hover:text-slate-400 transition-colors">Contact Support</a>
+          <a href="/sitemap.xml" class="hover:text-slate-400 transition-colors">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Viewport Safe Sticky Bottom Call Bar (Single-Line Defense) -->
+  <div class="sticky-call-bar lg:hidden fixed bottom-0 inset-x-0 bg-slate-950/95 backdrop-blur-md border-t border-slate-800 p-3 z-50 shadow-2xl">
+    <a href="tel:{{ site.phoneRaw }}" class="flex items-center justify-center space-x-2 w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-black text-base shadow-lg shadow-amber-500/25 active:scale-95 transition-all">
+      <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.13 12 19.79 19.79 0 0 1 1.06 3.39 2 2 0 0 1 3 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16l.92.92z"/></svg>
+      <span class="truncate">Call Dispatch: {{ site.phone }}</span>
+    </a>
+  </div>
+
+</body>
+</html>

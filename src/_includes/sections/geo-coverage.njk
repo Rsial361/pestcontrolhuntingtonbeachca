@@ -1,0 +1,26 @@
+<section class="py-16 sm:py-20 bg-slate-900 text-white border-t border-slate-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/25 text-amber-400 text-xs font-black uppercase tracking-wider mb-3">
+        <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+        <span>Regional Territory Coverage</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-white">
+        Huntington Beach and <span class="bg-gradient-to-r from-amber-400 to-amber-500 bg-clip-text text-transparent">Surrounding Municipalities</span>
+      </h2>
+      <div class="w-16 h-1 bg-gradient-to-r from-amber-400 to-amber-500 rounded-full mx-auto mt-4 mb-3"></div>
+      <p class="text-slate-300 text-base sm:text-lg mt-2">
+        Prompt technician dispatch across coastal Orange County communities, wetlands borders, and inland neighborhoods.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
+      {% for loc in locations %}
+      <a href="{{ loc.url }}" class="p-5 rounded-2xl bg-slate-800/80 hover:bg-amber-500 text-slate-200 hover:text-slate-950 font-bold text-sm border border-slate-700/80 hover:border-amber-500 transition-all text-center group shadow-md block">
+        <span class="block text-xs text-amber-400 group-hover:text-slate-900 uppercase font-black tracking-wider mb-1">Orange County</span>
+        <span class="block font-black text-base truncate">{{ loc.name }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

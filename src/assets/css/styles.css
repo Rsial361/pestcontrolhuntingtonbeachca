@@ -1,0 +1,190 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================================
+   DESIGNED HEADINGS (Typography Enhancement)
+   Transforms default prose headings into designed, high-impact brand elements
+   ========================================================================== */
+
+.prose h2 {
+  position: relative !important;
+  font-weight: 900 !important;
+  font-size: 1.875rem !important; /* 30px */
+  line-height: 1.25 !important;
+  letter-spacing: -0.025em !important;
+  color: #0f172a !important; /* slate-900 */
+  padding-left: 1.25rem !important;
+  border-left: 5px solid #f59e0b !important; /* amber-500 */
+  margin-top: 3.5rem !important;
+  margin-bottom: 1.5rem !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.prose h2::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 1.25rem;
+  width: 5rem;
+  height: 2px;
+  background: linear-gradient(to right, #f59e0b, transparent);
+  border-radius: 9999px;
+}
+
+.prose h3 {
+  font-weight: 800 !important;
+  font-size: 1.35rem !important;
+  line-height: 1.35 !important;
+  letter-spacing: -0.02em !important;
+  color: #1e293b !important; /* slate-800 */
+  margin-top: 2.25rem !important;
+  margin-bottom: 1rem !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.prose h3::before {
+  content: "";
+  display: inline-block;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+  box-shadow: 0 2px 4px rgba(245, 158, 11, 0.3);
+}
+
+.prose h4 {
+  font-weight: 800 !important;
+  font-size: 1.05rem !important;
+  color: #475569 !important; /* slate-600 */
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  margin-top: 1.75rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+/* ==========================================================================
+   PURE CSS DESKTOP NAVIGATION DROPDOWNS
+   Zero-JavaScript, accessible, smooth transition with hover & focus-within
+   ========================================================================== */
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 60;
+}
+
+/* Open on hover or focus-within */
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Services mega-dropdown positioning */
+.nav-dropdown-mega {
+  position: static;
+}
+
+.nav-dropdown-mega .nav-dropdown-menu {
+  left: 0;
+  right: 0;
+  transform: translateY(10px);
+}
+
+.nav-dropdown-mega:hover .nav-dropdown-menu,
+.nav-dropdown-mega:focus-within .nav-dropdown-menu {
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   HIGH-CONTRAST DATA TABLES
+   ========================================================================== */
+
+.prose thead th,
+.prose th {
+  color: #ffffff !important;
+  background-color: #0f172a !important; /* slate-900 */
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  font-size: 0.8125rem !important;
+  padding: 1rem 1.25rem !important;
+  border: none !important;
+}
+
+.prose table {
+  width: 100% !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  border-radius: 1rem !important;
+  overflow: hidden !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05) !important;
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+}
+
+.prose td {
+  padding: 1rem 1.25rem !important;
+  border-top: 1px solid #f1f5f9 !important;
+  color: #334155 !important;
+  font-size: 0.9375rem !important;
+  line-height: 1.5 !important;
+}
+
+.prose tr:nth-child(even) td {
+  background-color: #f8fafc !important;
+}
+
+.prose tr:hover td {
+  background-color: #f1f5f9 !important;
+}
+
+/* ==========================================================================
+   MOBILE SAFETY & VIEWPORT UTILITIES
+   ========================================================================== */
+
+body {
+  overflow-x: hidden;
+}
+
+.sticky-call-bar a {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.prose-body-content {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.logo-container {
+  max-width: calc(100% - 56px);
+  overflow: hidden;
+}
+
+/* Prevent Details Default Marker */
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}

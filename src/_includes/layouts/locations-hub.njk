@@ -1,0 +1,72 @@
+---
+layout: layouts/base.njk
+---
+
+{% include "components/inner-hero.njk" %}
+{% include "sections/trust-strip.njk" %}
+
+<!-- Municipal Locations Directory Grid -->
+<section class="py-16 sm:py-20 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+        Orange County Service Territories
+      </h2>
+      <p class="text-slate-600 text-base sm:text-lg mt-3">
+        Select your city below to learn about localized pest pressures, micro-climate factors, and field dispatch availability.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+      {% for loc in locations %}
+      <div class="bg-white rounded-2xl p-7 border border-slate-200/80 hover:border-amber-500 hover:shadow-xl transition-all flex flex-col justify-between group shadow-sm">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-amber-600 px-2.5 py-1 rounded-md bg-amber-500/10">
+              {% if loc.isPrimary %}Primary Authority Hub{% else %}Municipal Service Area{% endif %}
+            </span>
+            <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-800 group-hover:bg-amber-500 group-hover:text-slate-950 transition-colors shadow-sm">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+          </div>
+
+          <h3 class="text-2xl font-black text-slate-900 mb-2 group-hover:text-amber-600 transition-colors">
+            {{ loc.name }}
+          </h3>
+
+          <p class="text-sm text-slate-600 leading-relaxed mb-4">
+            {{ loc.description }}
+          </p>
+
+          <div class="flex flex-wrap gap-1.5 mb-6">
+            {% for zip in loc.zipCodes %}
+              <span class="text-[11px] font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded">
+                {{ zip }}
+              </span>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-slate-100">
+          <a href="{{ loc.url }}" class="inline-flex items-center text-sm font-extrabold text-amber-600 group-hover:text-amber-700">
+            <span>View Territory Coverage</span>
+            <svg class="w-4 h-4 ml-1.5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Deep Authority Content Below Directory Cards -->
+<section class="py-16 sm:py-20 bg-white border-t border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="prose prose-slate max-w-none prose-body-content">
+      {{ content | safe }}
+    </div>
+  </div>
+</section>
+
+{% include "sections/service-catalog.njk" %}
+{% include "sections/exit-call-strip.njk" %}

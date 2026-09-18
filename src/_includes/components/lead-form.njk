@@ -1,0 +1,63 @@
+<!-- LeadsLytic REST API Endpoint URL -->
+<!-- POST https://leadslytic.com/api/f/ea7bd960-d33a-4dbf-b84d-bebb7867fa82 -->
+<form action="{{ site.formEndpoint or 'https://leadslytic.com/api/f/ea7bd960-d33a-4dbf-b84d-bebb7867fa82' }}" method="POST" class="space-y-4 bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/50">
+  <input type="hidden" name="source_domain" value="{{ site.domain }}">
+  <input type="hidden" name="lead_page" value="{{ page.url }}">
+
+  <div>
+    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Full Name</label>
+    <input type="text" name="name" required placeholder="Jane Doe" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-amber-500 text-sm text-slate-900 placeholder-slate-400 outline-none">
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div>
+      <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Phone Number</label>
+      <input type="tel" name="phone" required placeholder="(714) 202-6531" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-amber-500 text-sm text-slate-900 placeholder-slate-400 outline-none">
+    </div>
+    <div>
+      <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Email Address</label>
+      <input type="email" name="email" placeholder="jane@example.com" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-amber-500 text-sm text-slate-900 placeholder-slate-400 outline-none">
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div>
+      <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Property Type</label>
+      <select name="property_type" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-amber-500 text-sm font-medium text-slate-800 outline-none">
+        <option value="Single-Family Home">Single-Family Home</option>
+        <option value="Condo / Townhouse">Condo / Townhouse</option>
+        <option value="Commercial Facility">Commercial Facility</option>
+        <option value="Restaurant / Food Service">Restaurant / Food Service</option>
+        <option value="Multi-Family Building">Multi-Family Building</option>
+      </select>
+    </div>
+    <div>
+      <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Primary Pest Concern</label>
+      <select name="pest_concern" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-amber-500 text-sm font-medium text-slate-800 outline-none">
+        <option value="Termites (Drywood or Subterranean)">Termites (Drywood or Subterranean)</option>
+        <option value="Rodents / Roof Rats">Rodents / Roof Rats</option>
+        <option value="Argentine Ants">Argentine Ants</option>
+        <option value="Cockroaches">Cockroaches</option>
+        <option value="Bed Bugs">Bed Bugs</option>
+        <option value="Spiders (Black / Brown Widows)">Spiders (Black / Brown Widows)</option>
+        <option value="Wasps / Yellowjackets">Wasps / Yellowjackets</option>
+        <option value="General Pest Defense">General Pest Defense</option>
+      </select>
+    </div>
+  </div>
+
+  <div>
+    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Describe Infestation Symptoms or Location</label>
+    <textarea name="notes" rows="3" placeholder="Describe where activity was observed (attic, kitchen, perimeter eaves, garage)..." class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-amber-500 text-sm text-slate-900 placeholder-slate-400 outline-none"></textarea>
+  </div>
+
+  <button type="submit" class="w-full py-4 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-black text-lg rounded-xl shadow-lg shadow-amber-500/30 transition-all flex items-center justify-center space-x-2">
+    <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+    <span>Request Clear Project Estimate</span>
+  </button>
+
+  <p class="text-center text-[11px] text-slate-500 mt-2 flex items-center justify-center space-x-1.5">
+    <svg class="w-3.5 h-3.5 text-slate-400 inline" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+    <span>100% Confidential. No Spam Guarantee. Direct Local Response.</span>
+  </p>
+</form>

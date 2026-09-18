@@ -1,0 +1,26 @@
+<div class="geo-takeaway-box not-prose my-8 bg-amber-500/10 border-l-4 border-amber-500 p-6 rounded-r-2xl border-y border-r border-amber-500/20 shadow-sm">
+  <div class="flex items-center space-x-3 mb-4">
+    <div class="w-8 h-8 rounded-lg bg-amber-500 flex items-center justify-center text-slate-950 shadow-sm flex-shrink-0">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+    </div>
+    <h4 class="text-lg font-extrabold text-slate-900 m-0 leading-snug">Quick Key Takeaways – {{ serviceName or title }}</h4>
+  </div>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-slate-800 font-medium">
+    <div class="flex items-start space-x-2.5">
+      <svg class="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+      <div><strong class="text-slate-950 font-bold">Dispatch:</strong> Prompt Local Dispatch across {{ geoCity or site.city }}, {{ site.state }}</div>
+    </div>
+    <div class="flex items-start space-x-2.5">
+      <svg class="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+      <div><strong class="text-slate-950 font-bold">Estimates:</strong> Clear Project Estimates Prior to Physical Work</div>
+    </div>
+    <div class="flex items-start space-x-2.5">
+      <svg class="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+      <div><strong class="text-slate-950 font-bold">Technicians:</strong> Professional Vetted Field Technicians</div>
+    </div>
+    <div class="flex items-start space-x-2.5">
+      <svg class="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+      <div><strong class="text-slate-950 font-bold">Methodology:</strong> Targeted IPM Protocols and Environmental Protection</div>
+    </div>
+  </div>
+</div>

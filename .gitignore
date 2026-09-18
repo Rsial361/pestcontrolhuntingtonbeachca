@@ -1,0 +1,12 @@
+# Dependencies
+node_modules/
+
+# 11ty output
+_site/
+
+# Local env & OS files
+.env
+.env.local
+.DS_Store
+Thumbs.db
+*.log

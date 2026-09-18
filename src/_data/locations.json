@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Huntington Beach",
+    "slug": "huntington-beach",
+    "url": "/locations/huntington-beach/",
+    "isPrimary": true,
+    "description": "Primary service territory covering Downtown HB, Huntington Harbour, Seacliff, Bolsa Chica, Sunset Beach, Goldenwest, Yorktown, and Oak View.",
+    "zipCodes": ["92646", "92647", "92648", "92649"]
+  },
+  {
+    "name": "Fountain Valley",
+    "slug": "fountain-valley",
+    "url": "/locations/fountain-valley/",
+    "isPrimary": false,
+    "description": "Providing prompt pest control dispatch across Fountain Valley residential tracts and commercial centers bordering the Santa Ana River basin.",
+    "zipCodes": ["92708", "92728"]
+  },
+  {
+    "name": "Westminster",
+    "slug": "westminster",
+    "url": "/locations/westminster/",
+    "isPrimary": false,
+    "description": "Comprehensive insect and rodent management for Westminster single-family homes, multi-unit properties, and commercial retail districts.",
+    "zipCodes": ["92683", "92684", "92685"]
+  },
+  {
+    "name": "Costa Mesa",
+    "slug": "costa-mesa",
+    "url": "/locations/costa-mesa/",
+    "isPrimary": false,
+    "description": "Targeted pest elimination and termite defense across Costa Mesa neighborhoods from Mesa Verde to Eastside Costa Mesa.",
+    "zipCodes": ["92626", "92627", "92628"]
+  },
+  {
+    "name": "Seal Beach",
+    "slug": "seal-beach",
+    "url": "/locations/seal-beach/",
+    "isPrimary": false,
+    "description": "Coastal pest management addressing termite pressure, dock-adjacent rodents, and Argentine ants throughout Old Town and Bridgeport.",
+    "zipCodes": ["90740"]
+  },
+  {
+    "name": "Newport Beach",
+    "slug": "newport-beach",
+    "url": "/locations/newport-beach/",
+    "isPrimary": false,
+    "description": "Specialized coastal residential and commercial pest defense for Newport Beach properties, Balboa Peninsula, and West Newport.",
+    "zipCodes": ["92660", "92661", "92662", "92663"]
+  }
+]

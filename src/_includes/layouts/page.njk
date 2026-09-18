@@ -1,0 +1,23 @@
+---
+layout: layouts/base.njk
+---
+
+{% include "components/inner-hero.njk" %}
+{% include "sections/trust-strip.njk" %}
+
+<section class="py-16 sm:py-20 bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    {% include "components/geo-takeaway-box.njk" %}
+
+    <div class="prose prose-slate max-w-none prose-body-content">
+      {{ content | safe }}
+    </div>
+
+    <div class="mt-12 pt-8 border-t border-slate-200">
+      <h3 class="text-2xl font-black text-slate-900 mb-6">Frequently Asked Questions</h3>
+      {% include "sections/faq-accordion.njk" %}
+    </div>
+  </div>
+</section>
+
+{% include "sections/exit-call-strip.njk" %}

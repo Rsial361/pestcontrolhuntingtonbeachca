@@ -1,0 +1,38 @@
+---
+layout: layouts/base.njk
+title: "Page Not Found | 404 Error"
+permalink: /404.html
+eleventyExcludeFromCollections: true
+---
+
+<section class="py-20 bg-white text-center">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+    <div class="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-black bg-amber-500/10 text-amber-600 border border-amber-500/20 uppercase tracking-wider">
+      404 Error: Resource Not Found
+    </div>
+    <h1 class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight">Looking For Pest Control Help?</h1>
+    <p class="text-slate-600 text-base sm:text-lg">
+      The page you requested may have moved or no longer exists. Use the direct navigation pathways below or call our local field dispatch desk directly.
+    </p>
+
+    <div class="pt-6 flex flex-wrap justify-center gap-4">
+      <a href="/" class="px-6 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-black text-sm transition-colors shadow-md">
+        Return to Homepage
+      </a>
+      <a href="/services/" class="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm transition-colors">
+        Browse All Pest Services
+      </a>
+      <a href="/pests/" class="px-6 py-3.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-sm transition-colors">
+        Explore Pest Library
+      </a>
+    </div>
+
+    <div class="mt-12 p-6 bg-slate-50 rounded-2xl border border-slate-200 max-w-lg mx-auto">
+      <h3 class="text-lg font-black text-slate-900 mb-2">Need Immediate Assistance?</h3>
+      <p class="text-xs text-slate-600 mb-4">Connect directly with our local response crew for prompt dispatch and clear project estimates.</p>
+      <a href="tel:{{ site.phoneRaw }}" class="text-amber-600 font-black text-xl hover:underline">
+        {{ site.phone }}
+      </a>
+    </div>
+  </div>
+</section>

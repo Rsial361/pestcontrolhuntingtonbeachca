@@ -1,0 +1,54 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "{{ site.schemaType or 'LocalBusiness' }}",
+  "name": "{{ site.name }}",
+  "legalName": "{{ site.legalName or site.name }}",
+  "url": "{{ site.url }}",
+  "telephone": "{{ site.phoneRaw or site.phone }}",
+  "email": "{{ site.email }}",
+  "priceRange": "{{ site.priceRange or '$$' }}",
+  "image": "{{ site.url }}/assets/images/brand/logo.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ site.address.street }}",
+    "addressLocality": "{{ site.address.city }}",
+    "addressRegion": "{{ site.address.state }}",
+    "postalCode": "{{ site.address.zip }}",
+    "addressCountry": "{{ site.address.country or 'US' }}"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": {{ site.geo.latitude }},
+    "longitude": {{ site.geo.longitude }}
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "07:00",
+      "closes": "20:00"
+    }
+  ],
+  "areaServed": [
+    {% for area in site.areaServed %}
+    {
+      "@type": "AdministrativeArea",
+      "name": "{{ area }}"
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ],
+  "knowsAbout": [
+    "General Pest Control",
+    "Western Drywood Termite Control",
+    "Subterranean Termite Treatment",
+    "Roof Rat Trapping and Exclusion",
+    "Argentine Ant Colony Elimination",
+    "German Cockroach Eradication",
+    "Spider Control",
+    "Bed Bug Heat Treatment",
+    "Mosquito Abatement",
+    "Pest Inspection"
+  ]
+}
+</script>

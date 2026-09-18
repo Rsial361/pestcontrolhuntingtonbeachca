@@ -1,0 +1,80 @@
+---
+layout: layouts/base.njk
+---
+
+{% include "components/inner-hero.njk" %}
+{% include "sections/trust-strip.njk" %}
+
+<section class="py-16 sm:py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      
+      <!-- Main Content Column (8 cols) -->
+      <div class="lg:col-span-8 space-y-8">
+        {% include "components/geo-takeaway-box.njk" %}
+
+        <div class="prose prose-slate max-w-none prose-body-content">
+          {{ content | safe }}
+        </div>
+
+        <!-- Commercial Service Bridge Banner -->
+        {% if serviceUrl %}
+        <div class="my-8 p-6 rounded-2xl bg-amber-500/10 border-2 border-amber-500 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div>
+            <h4 class="text-lg font-black text-slate-900 mb-1">Suspect Active {{ pestName or title }} on Your Property?</h4>
+            <p class="text-xs text-slate-600">Connect with an experienced local field technician for thorough inspection and targeted eradication.</p>
+          </div>
+          <a href="{{ serviceUrl }}" class="px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm whitespace-nowrap transition-colors flex-shrink-0">
+            View {{ pestName or "Pest" }} Control Service →
+          </a>
+        </div>
+        {% endif %}
+
+        <div class="mt-12 pt-8 border-t border-slate-200">
+          <h3 class="text-2xl font-black text-slate-900 mb-6">Frequently Asked Questions: {{ pestName or title }}</h3>
+          {% include "sections/faq-accordion.njk" %}
+        </div>
+      </div>
+
+      <!-- Right Sticky Knowledge & Dispatch Card (4 cols) -->
+      <div class="lg:col-span-4">
+        <div class="sticky top-28 space-y-6">
+          
+          <div class="bg-slate-900 text-white p-7 rounded-2xl border border-slate-800 shadow-xl space-y-4">
+            <span class="text-xs font-black uppercase tracking-wider text-amber-400">Biological Profile</span>
+            <h3 class="text-xl font-black text-white">{{ pestName or title }} Overview</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              {{ pestSubtitle or "Understanding pest biology and seasonal behavior is critical to preventing structural colonization across Huntington Beach properties." }}
+            </p>
+
+            <div class="pt-4 border-t border-slate-800 space-y-2 text-xs text-slate-300">
+              {% if serviceUrl %}
+              <a href="{{ serviceUrl }}" class="block p-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-amber-400 font-bold transition-colors">
+                Explore Treatment Service Specifications →
+              </a>
+              {% endif %}
+              <a href="/pest-control/signs-of-infestation/" class="block p-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold transition-colors">
+                Review Early Warning Signs →
+              </a>
+              <a href="/pest-control-cost/" class="block p-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold transition-colors">
+                Explore Treatment Cost Factors →
+              </a>
+            </div>
+
+            <div class="pt-4 border-t border-slate-800">
+              <a href="tel:{{ site.phoneRaw }}" class="flex items-center justify-center space-x-2 w-full py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-black text-base shadow-lg">
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.13 12 19.79 19.79 0 0 1 1.06 3.39 2 2 0 0 1 3 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16l.92.92z"/></svg>
+                <span>Call Dispatch: {{ site.phone }}</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% include "sections/authority-guides.njk" %}
+{% include "sections/exit-call-strip.njk" %}

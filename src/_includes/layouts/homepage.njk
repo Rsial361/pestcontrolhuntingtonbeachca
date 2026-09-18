@@ -1,0 +1,56 @@
+---
+layout: layouts/base.njk
+---
+
+<!-- Section 1: Hero Header -->
+{% include "sections/hero-call.njk" %}
+
+<!-- Section 2: Social Proof & Client Badges -->
+{% include "sections/trust-strip.njk" %}
+
+<!-- Section 3: Core Value Propositions & Benefits -->
+{% include "sections/value-props.njk" %}
+
+<!-- Section 4: Featured Services Directory Grid -->
+{% include "sections/service-catalog.njk" %}
+
+<!-- Section 5: How It Works / Process (4-Step Visual Grid) -->
+{% include "sections/process-steps.njk" %}
+
+<!-- Section 6: Comprehensive In-Depth Authority Body Content -->
+<section class="py-16 sm:py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="prose prose-slate max-w-none prose-body-content">
+      {{ content | safe }}
+    </div>
+  </div>
+</section>
+
+<!-- Section 7: Authority Technical Guides & Field Notes -->
+{% include "sections/authority-guides.njk" %}
+
+<!-- Section 8: Geographic Municipal Coverage -->
+{% include "sections/geo-coverage.njk" %}
+
+<!-- Section 9: FAQ & Final Conversion Call Banner -->
+<section class="py-16 sm:py-20 bg-slate-50 border-t border-slate-200">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14">
+      <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/25 text-amber-600 text-xs font-black uppercase tracking-wider mb-3">
+        <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+        <span>Common Questions Answered</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+        Frequently Asked Questions
+      </h2>
+      <div class="w-16 h-1 bg-gradient-to-r from-amber-500 to-amber-600 rounded-full mx-auto mt-4 mb-3"></div>
+      <p class="text-slate-600 text-base sm:text-lg mt-2">
+        Clear answers to common inquiries regarding pest treatments, dispatch timelines, and property safety.
+      </p>
+    </div>
+    {% include "sections/faq-accordion.njk" %}
+  </div>
+</section>
+
+<!-- Section 10: Exit Conversion Call Strip -->
+{% include "sections/exit-call-strip.njk" %}

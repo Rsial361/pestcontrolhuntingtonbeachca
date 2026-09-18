@@ -1,0 +1,31 @@
+{
+  "name": "pestcontrolhuntingtonbeachca",
+  "version": "1.0.0",
+  "description": "Elite Local Pest Control Authority & Lead Generation Website for Huntington Beach, CA",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "postcss src/assets/css/styles.css -o _site/assets/css/styles.css --env production",
+    "build:11ty": "eleventy",
+    "build": "npm run build:11ty && npm run build:css",
+    "watch:css": "postcss src/assets/css/styles.css -o _site/assets/css/styles.css --watch",
+    "watch:11ty": "eleventy --watch",
+    "start": "npm run build && eleventy --serve"
+  },
+  "keywords": [
+    "pest-control",
+    "huntington-beach",
+    "eleventy",
+    "tailwind"
+  ],
+  "author": "PestControlHuntingtonBeachCA",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@tailwindcss/typography": "^0.5.16",
+    "autoprefixer": "^10.4.20",
+    "markdown-it": "^14.1.0",
+    "postcss": "^8.4.49",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.4.17"
+  }
+}

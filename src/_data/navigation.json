@@ -1,0 +1,104 @@
+{
+  "main": [
+    {
+      "label": "Services",
+      "url": "/services/",
+      "isDropdown": true,
+      "items": [
+        { "label": "General Pest Control", "url": "/services/general-pest-control/", "desc": "Ants, spiders, crickets, and silverfish" },
+        { "label": "Residential Pest Control", "url": "/services/residential-pest-control/", "desc": "Customized home perimeter defense" },
+        { "label": "Commercial Pest Control", "url": "/services/commercial-pest-control/", "desc": "Audit-compliant facility management" },
+        { "label": "Termite Control", "url": "/services/termite-control/", "desc": "Drywood and subterranean treatments" },
+        { "label": "Rodent Control", "url": "/services/rodent-control/", "desc": "Roof rat and mouse trapping and cleanout" },
+        { "label": "Cockroach Control", "url": "/services/cockroach-control/", "desc": "German and American roach elimination" },
+        { "label": "Ant Control", "url": "/services/ant-control/", "desc": "Argentine ant supercolony barriers" },
+        { "label": "Bed Bug Treatment", "url": "/services/bed-bug-control/", "desc": "Thermal heat remediation and dusting" },
+        { "label": "Mosquito Control", "url": "/services/mosquito-control/", "desc": "Perimeter fogging and larvicide defense" },
+        { "label": "Spider Control", "url": "/services/spider-control/", "desc": "Black widow and brown widow clearance" },
+        { "label": "Wasp Removal", "url": "/services/wasp-control/", "desc": "Paper wasp and yellowjacket nest removal" },
+        { "label": "Flea and Tick Control", "url": "/services/flea-tick-control/", "desc": "Coastal yard and interior flea care" },
+        { "label": "Pest Exclusion", "url": "/services/pest-exclusion/", "desc": "Galvanized mesh and building sealing" },
+        { "label": "Pest Inspection", "url": "/services/pest-inspection/", "desc": "Diagnostic real estate and home audits" },
+        { "label": "Recurring Pest Plans", "url": "/services/recurring-pest-control/", "desc": "Year-round bi-monthly protection" }
+      ]
+    },
+    {
+      "label": "Pest Library",
+      "url": "/pests/",
+      "isDropdown": true,
+      "items": [
+        { "label": "Termites", "url": "/pests/termites/", "desc": "Drywood and Subterranean species identification" },
+        { "label": "Rodents and Rats", "url": "/pests/rodents/", "desc": "Roof rats, Norway rats, and house mice" },
+        { "label": "Argentine Ants", "url": "/pests/ants/", "desc": "Supercolonies and seasonal swarms" },
+        { "label": "Cockroaches", "url": "/pests/cockroaches/", "desc": "German, American, and Oriental species" },
+        { "label": "Bed Bugs", "url": "/pests/bed-bugs/", "desc": "Biomarkers, fecal spots, and bites" },
+        { "label": "Mosquitoes", "url": "/pests/mosquitoes/", "desc": "Aedes and Culex coastal vectors" },
+        { "label": "Spiders", "url": "/pests/spiders/", "desc": "Western black widows and orb-weavers" }
+      ]
+    },
+    {
+      "label": "Locations",
+      "url": "/locations/",
+      "isDropdown": true,
+      "items": [
+        { "label": "Huntington Beach", "url": "/locations/huntington-beach/", "desc": "Flagship authority and all neighborhoods" },
+        { "label": "Fountain Valley", "url": "/locations/fountain-valley/", "desc": "River basin and Mile Square Park" },
+        { "label": "Westminster", "url": "/locations/westminster/", "desc": "Single-family and commercial dining" },
+        { "label": "Costa Mesa", "url": "/locations/costa-mesa/", "desc": "Mesa Verde, Eastside, and river trails" },
+        { "label": "Seal Beach", "url": "/locations/seal-beach/", "desc": "Old Town, Bridgeport, and coastal docks" },
+        { "label": "Newport Beach", "url": "/locations/newport-beach/", "desc": "Coastal estates and Balboa Peninsula" }
+      ]
+    },
+    {
+      "label": "Guides",
+      "url": "/pest-control/",
+      "isDropdown": true,
+      "items": [
+        { "label": "Signs of Infestation", "url": "/pest-control/signs-of-infestation/", "desc": "Early detection markers and damage" },
+        { "label": "Seasonal Pest Activity", "url": "/pest-control/seasonal-pests/", "desc": "Month-by-month Southern California calendar" },
+        { "label": "Home Pest Prevention", "url": "/pest-control/pest-prevention/", "desc": "Structural hardening and landscape tips" }
+      ]
+    },
+    { "label": "About", "url": "/about/", "isDropdown": false },
+    { "label": "Contact", "url": "/contact/", "isDropdown": false }
+  ],
+  "footerServices": [
+    { "label": "General Pest Control", "url": "/services/general-pest-control/" },
+    { "label": "Residential Pest Control", "url": "/services/residential-pest-control/" },
+    { "label": "Commercial Pest Control", "url": "/services/commercial-pest-control/" },
+    { "label": "Termite Control", "url": "/services/termite-control/" },
+    { "label": "Rodent Control", "url": "/services/rodent-control/" },
+    { "label": "Cockroach Control", "url": "/services/cockroach-control/" },
+    { "label": "Ant Control", "url": "/services/ant-control/" },
+    { "label": "Bed Bug Treatment", "url": "/services/bed-bug-control/" },
+    { "label": "Mosquito Control", "url": "/services/mosquito-control/" },
+    { "label": "Spider Control", "url": "/services/spider-control/" },
+    { "label": "Wasp Removal", "url": "/services/wasp-control/" },
+    { "label": "Flea and Tick Control", "url": "/services/flea-tick-control/" },
+    { "label": "Pest Exclusion", "url": "/services/pest-exclusion/" },
+    { "label": "Pest Inspection", "url": "/services/pest-inspection/" },
+    { "label": "Recurring Pest Plans", "url": "/services/recurring-pest-control/" }
+  ],
+  "footerPests": [
+    { "label": "Termites", "url": "/pests/termites/" },
+    { "label": "Rodents and Rats", "url": "/pests/rodents/" },
+    { "label": "Argentine Ants", "url": "/pests/ants/" },
+    { "label": "Cockroaches", "url": "/pests/cockroaches/" },
+    { "label": "Bed Bugs", "url": "/pests/bed-bugs/" },
+    { "label": "Mosquitoes", "url": "/pests/mosquitoes/" },
+    { "label": "Spiders", "url": "/pests/spiders/" }
+  ],
+  "footerLocations": [
+    { "label": "Huntington Beach", "url": "/locations/huntington-beach/" },
+    { "label": "Fountain Valley", "url": "/locations/fountain-valley/" },
+    { "label": "Westminster", "url": "/locations/westminster/" },
+    { "label": "Costa Mesa", "url": "/locations/costa-mesa/" },
+    { "label": "Seal Beach", "url": "/locations/seal-beach/" },
+    { "label": "Newport Beach", "url": "/locations/newport-beach/" }
+  ],
+  "footerGuides": [
+    { "label": "Signs of Infestation", "url": "/pest-control/signs-of-infestation/" },
+    { "label": "Seasonal Pest Activity", "url": "/pest-control/seasonal-pests/" },
+    { "label": "Home Pest Prevention", "url": "/pest-control/pest-prevention/" }
+  ]
+}

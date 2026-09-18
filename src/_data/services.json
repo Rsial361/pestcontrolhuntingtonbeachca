@@ -1,0 +1,122 @@
+[
+  {
+    "title": "General Pest Control",
+    "slug": "general-pest-control",
+    "url": "/services/general-pest-control/",
+    "category": "Core Maintenance",
+    "description": "Comprehensive defense against common household pests including ants, spiders, crickets, and silverfish across Huntington Beach properties.",
+    "icon": "shield"
+  },
+  {
+    "title": "Residential Pest Control",
+    "slug": "residential-pest-control",
+    "url": "/services/residential-pest-control/",
+    "category": "Home Protection",
+    "description": "Customized home perimeter treatments, attic inspections, and targeted interior defense designed for Huntington Beach homeowners.",
+    "icon": "home"
+  },
+  {
+    "title": "Commercial Pest Control",
+    "slug": "commercial-pest-control",
+    "url": "/services/commercial-pest-control/",
+    "category": "Business Defense",
+    "description": "Discreet, health-code-compliant pest management programs for restaurants, retail storefronts, and commercial facilities throughout Orange County.",
+    "icon": "building"
+  },
+  {
+    "title": "Termite Control",
+    "slug": "termite-control",
+    "url": "/services/termite-control/",
+    "category": "Wood-Destroying Organisms",
+    "description": "Advanced detection and treatment for Western drywood and subterranean termites, including localized spot treatments and structural defense.",
+    "icon": "bug"
+  },
+  {
+    "title": "Rodent Control",
+    "slug": "rodent-control",
+    "url": "/services/rodent-control/",
+    "category": "Rodent Management",
+    "description": "Targeted trapping, attic sanitization, and habitat remediation to eliminate roof rats and mice from coastal Orange County structures.",
+    "icon": "mouse"
+  },
+  {
+    "title": "Cockroach Control",
+    "slug": "cockroach-control",
+    "url": "/services/cockroach-control/",
+    "category": "Crawling Insects",
+    "description": "Precision baiting, insect growth regulators, and flush treatments to eradicate persistent German and Oriental cockroach infestations.",
+    "icon": "alert"
+  },
+  {
+    "title": "Ant Control",
+    "slug": "ant-control",
+    "url": "/services/ant-control/",
+    "category": "Colony Elimination",
+    "description": "Colony-transfer baits and non-repellent perimeter barriers engineered specifically to conquer massive Argentine ant supercolonies.",
+    "icon": "target"
+  },
+  {
+    "title": "Bed Bug Treatment",
+    "slug": "bed-bug-control",
+    "url": "/services/bed-bug-control/",
+    "category": "Specialty Eradication",
+    "description": "Multi-stage thermal and targeted chemical remediation protocols to eliminate bed bug adults, nymphs, and eggs from mattresses and wall voids.",
+    "icon": "shield-check"
+  },
+  {
+    "title": "Mosquito Control",
+    "slug": "mosquito-control",
+    "url": "/services/mosquito-control/",
+    "category": "Seasonal Outdoor",
+    "description": "Targeted foliage misting, standing water larviciding, and breeding source reduction for properties near Bolsa Chica and coastal canals.",
+    "icon": "droplet"
+  },
+  {
+    "title": "Spider Control",
+    "slug": "spider-control",
+    "url": "/services/spider-control/",
+    "category": "Venomous & Nuisance",
+    "description": "De-webbing sweeps, perimeter barrier treatments, and harbor reduction for Western black widows and brown widow spiders.",
+    "icon": "compass"
+  },
+  {
+    "title": "Wasp Removal",
+    "slug": "wasp-control",
+    "url": "/services/wasp-control/",
+    "category": "Stinging Insects",
+    "description": "Safe removal of paper wasp nests, yellowjacket ground colonies, and mud daubers from roof eaves, decks, and structural overhangs.",
+    "icon": "zap"
+  },
+  {
+    "title": "Flea and Tick Control",
+    "slug": "flea-tick-control",
+    "url": "/services/flea-tick-control/",
+    "category": "Parasite Management",
+    "description": "Dual-action outdoor turf applications and interior premise treatments to interrupt the reproductive life cycle of fleas and ticks.",
+    "icon": "crosshair"
+  },
+  {
+    "title": "Pest Exclusion Service",
+    "slug": "pest-exclusion",
+    "url": "/services/pest-exclusion/",
+    "category": "Structural Defense",
+    "description": "Physical reinforcement of foundation weep screeds, crawlspace vents, roofline gaps, and utility penetrations with chew-proof materials.",
+    "icon": "tool"
+  },
+  {
+    "title": "Pest Inspection",
+    "slug": "pest-inspection",
+    "url": "/services/pest-inspection/",
+    "category": "Diagnostic Testing",
+    "description": "Thorough visual, acoustic, and moisture evaluation of foundation sill plates, attics, sub-areas, and exterior grounds to diagnose infestations.",
+    "icon": "search"
+  },
+  {
+    "title": "Recurring Pest Protection",
+    "slug": "recurring-pest-control",
+    "url": "/services/recurring-pest-control/",
+    "category": "Maintenance Plans",
+    "description": "Quarterly and bi-monthly scheduled perimeter treatments, monitoring stations, and seasonal barrier refreshes for uninterrupted defense.",
+    "icon": "calendar"
+  }
+]
