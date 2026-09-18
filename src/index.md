@@ -206,27 +206,6 @@ When property owners discover insect trails or hear scratching sounds within wal
 
 ---
 
-## Frequently Asked Questions: Huntington Beach Pest Management
-
-### Are your pest control treatments safe for my children and household pets?
-Field technicians prioritize safety by adhering strictly to California Department of Pesticide Regulation (DPR) mandates and EPA-approved product labels. Perimeter barrier applications are applied low to the ground around exterior foundation edges, while indoor treatments utilize targeted gel baits placed in hidden wall crevices, cabinet hinges, and appliance recesses completely inaccessible to children and pets. Technicians provide clear guidance on brief drying periods (typically 1 to 2 hours) before family members and animals resume using exterior patio zones.
-
-### How do I tell if I have flying ants or swarming termites?
-While both insects produce winged reproductive swarmers, they possess distinct biological differences:
-- **Termite Swarmers:** Have straight, bead-like antennae; a broad, uniform waist with no constriction; and four wings of equal size and length that are fragile and shed easily.
-- **Swarming Ants:** Have distinctly elbowed (bent) antennae; a pinched, narrow "wasp-like" waist; and front wings that are noticeably larger than the hind wings. If you find shed wings on interior window sills, contact our desk immediately for a professional [termite inspection](/services/pest-inspection/).
-
-### What specific signs indicate that roof rats are inside my attic?
-Common indicators of active rodent infestation include scurrying or scratching sounds above ceilings between dusk and dawn; dark, spindle-shaped droppings measuring approximately 1/2 inch in length scattered near insulation; smudge marks (rub marks) along attic rafters and pipes created by skin oils; and damaged, shredded fiberglass insulation used for nesting material.
-
-### Will pest control eliminate all bugs permanently from my property?
-No reputable, scientifically grounded pest control provider can promise 100% permanent pest eradication across an open exterior environment. Outdoor insects are an integral component of the natural coastal ecosystem. However, a professional IPM program creates an impenetrable protective chemical and physical barrier around your structure, rapidly eradicating active indoor colonies and preventing outdoor insects from establishing interior harborage.
-
-### Do I need to vacate my home during an exterior perimeter treatment?
-No. Standard exterior perimeter barrier applications, rodent exclusion repairs, and exterior de-webbing sweeps do not require you to leave your residence. You simply need to ensure that exterior windows are closed and household pets are kept indoors while the technician applies the treatment. Vacating the premises is only necessary during specialized indoor flea treatments, intensive bed bug heat treatments, or whole-structure fumigations.
-
----
-
 ## Protect Your Huntington Beach Property Today
 
 Do not allow termites to compromise your home's structural framing, rodents to chew through attic wiring, or Argentine ants to invade your kitchen living areas. Connect with our dedicated Huntington Beach field dispatch desk today to discuss your symptoms, schedule an empirical on-site diagnostic inspection, and receive a clear, itemized written estimate.
